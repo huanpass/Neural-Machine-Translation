@@ -1,10 +1,10 @@
-### Abstract
+## Abstract
 
 You can use the [editor on GitHub](https://github.com/huanpass/Neural-Machine-Translation/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### The big picture 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -22,7 +22,8 @@ Syntax highlighted code block
 2. List
 
 **Bold** and _Italic_ and `Code` text
-
+<img src="images/Emoticons/cool.png" alt="hi" class="inline"/>
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 [Link](url) and ![Image](src)
 ```
 
