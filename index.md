@@ -25,10 +25,10 @@ Syntax highlighted code block
 <img src="images/Emoticons/cool.png" alt="hi" class="inline"/>
 
 [Link](url) and ![Image](src)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 
 ```
-
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
