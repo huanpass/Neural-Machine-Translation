@@ -30,10 +30,12 @@ Evaluation setting: BLEU (1K sentences for one epoch) and manual analysis (10 se
 Optimizer 
 ### Adam Vs SGD
 ![whe](https://lh3.googleusercontent.com/-H0TiBwPpfn0/WyA1n_z-zPI/AAAAAAAAAGc/4cEr6MZoKKozKhezJIdEjrofFKtLe2gwwCL0BGAs/w663-d-h277-n-rw/adam.PNG)
+
 The experiment indicates that Adam converges faster in the initial period while then settle in a bad solution for a while without further improvement. The SGD through slow in the initial period, capable of finding a better solution gradually in the end. According to reviews to papers [], it is found that adaptivit is more likely to overfit making it unable to find the optimal solution and generally worser than the solution of SGD though very popular. 
 
 ### Decoder Implementation 
 ![how](https://lh3.googleusercontent.com/-rghISEoADVA/WyA1rbqxwNI/AAAAAAAAAGw/8k3WKRgZ01UnntFQdVknnGGFUoeGYZ_uwCL0BGAs/w663-d-h285-n-rw/decoder.PNG)
+
 The main motivation is to see whether such a complex decoder integrated with attention mechanism is necessary or not. I have implemented a simple decoder based on one GRU layer, with embedding and dropout functions added. The result indicates without attention mechanism, the training time can be speedup by 11.1% with similar even better translation quality. 
 
 
