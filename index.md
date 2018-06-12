@@ -53,7 +53,7 @@ The project has reviewed several papers and projects regarding machine translati
 ### Translation samples 
 ![h](https://lh3.googleusercontent.com/-C4D9CgLZT18/WyA44n4TvAI/AAAAAAAAAHo/0cidm4k10D88-F_FPXaS8-e8n6jqQ_wFwCL0BGAs/w663-d-h452-n-rw/ABC.PNG)
 
-French - English    Chinese - English
+French - English                                   Chinese - English
 
 
 
