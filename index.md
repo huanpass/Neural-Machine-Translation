@@ -50,7 +50,12 @@ The index model of every word is generated via counting the words show up in dat
 ### Conclusion
 The project has reviewed several papers and projects regarding machine translation and general NLP issues. The efficiency of neural machine translation model has been verified. And SGD optimizer with default setting won Adam with default setting in the final translation quality through faster in convergence in the initial stage. The review result also indicates Adam actually bad for a broader range of cases. As for the attention mechanism, my result indicates this technique maybe not more optimum than simple basic decode model while much more complex. It is not clear whether this conclusion still hold for larger size data set and more training epochs. The BLEU function has been imported with efficiency verified. As for the dimension of hidden layer, my result indicates higher dimension means more efficient utilization of data set while the training is much slower considering in my case the parameters have almost been doubled. Finally, the parsing support for Chinese language is done demonstrating the generality of the neural machine translation model. 
 
+### Translation samples 
+![h](https://lh3.googleusercontent.com/-C4D9CgLZT18/WyA44n4TvAI/AAAAAAAAAHo/0cidm4k10D88-F_FPXaS8-e8n6jqQ_wFwCL0BGAs/w663-d-h452-n-rw/ABC.PNG)
+
+French - English    Chinese - English
 
 
 
-                                                                                             Arther: Zequan Zhou   Group 43   EECS349
+
+                                                                                             Auther: Zequan Zhou   Group 43   EECS349
