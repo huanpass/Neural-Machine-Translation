@@ -1,11 +1,11 @@
 ## Abstract
 
-Machine translation (MT) is an important approach in NLP domain with lots of market value and influence on fundamental theory of NLP. Considering the complexity of language models and difficulties in evaluating the results quantitatively, some novel models and evaluation method are required to achieve meaningful results. After the initial review, it is found that the neural machine translation method can address the challenge well. So, the first stage of the project is mainly about paper review regarding embedding features of words, sequence to sequence model, attention mechanism and BLEU evaluation method. The 2nd stage of the project aims to optimize an existing Neural-MT project via replacing part of the code (Encoder), importing the BLEU function and modifying the parameters (Optimizer/Layer type/dimension) to analysis the effects plus expanding the parsing section to support Chinese font. 
+Machine translation (MT) is an important approach in NLP domain with lots of market value and influence on fundamental theory of NLP. Considering the complexity of language models and difficulties in evaluating the results quantitatively, some novel models and evaluation method are required to achieve meaningful results. After the initial review, it is found that the neural machine translation method can address the challenge well. So, the first stage of the project is mainly about paper review regarding embedding features of words, sequence to sequence model, attention mechanism and BLEU evaluation method. The 2nd stage of the project aims to optimize an existing Neural-MT project[1] via replacing part of the code (Encoder), importing the BLEU function and modifying the parameters (Optimizer/Layer type/dimension) to analysis the effects plus expanding the parsing section to support Chinese font. 
 
 ### Principles in Neural Machine Translation 
 
 To represent a sentence in tensor form, it can be thought as the collection of tensors of each word. For the tensor of each word, one hot encoding can be too sparse and lack relevance between different words. A more efficient encoding method is to use the embedding feature of words. In the project, the initial one hot encoding was taken to convert word to index, then use word embedding layer from pytorch to convert index to tensor. The order of tensors of word in tensor of sentence reflects the order of words in the original sentence to maintain the semantics in structure. 
-The sequence to sequence model is based on the conception that if we merge multiple languages in single network together, the differences can cause the network fails unless the network is quite large capable to find some high level pattern to co-exist different languages which can be difficult to converge and not efficient. So, sequence to sequence model aims to cooperate between 2 networks to utilize the information of each language maximally and efficiently while not distort each other. The encoder takes the input word one by one generating the context tensor in the end. Then the decoder utilizes the <SOS> as the first input and context tensor from encoder as the first hidden state input to start its own loop. 
+The sequence to sequence model is based on the conception that if we merge multiple languages in single network together, the differences can cause the network fails unless the network is quite large capable to find some high level pattern to co-exist different languages which can be difficult to converge and not efficient. So, sequence to sequence model aims to cooperate between 2 networks to utilize the information of each language maximally and efficiently while not distort each other. The encoder takes the input word one by one generating the context tensor in the end. Then the decoder utilizes the <SOS> as the first input and context tensor from encoder as the first hidden state input to start its own loop[2]. 
 The secrete sauce is the attention mechanism. Normally, it is assumed that there exist strong relationship between the words in similar locations/structures of sentences. Rather than just provide a full context tensor of the encoder, an attention matrix was generated from encoder output to make the decoder to focus on certain locations in the sentence when translating certain locations. 
 
 ### The big picture 
@@ -31,7 +31,7 @@ Optimizer
 ### Adam Vs SGD
 ![whe](https://lh3.googleusercontent.com/-H0TiBwPpfn0/WyA1n_z-zPI/AAAAAAAAAGc/4cEr6MZoKKozKhezJIdEjrofFKtLe2gwwCL0BGAs/w663-d-h277-n-rw/adam.PNG)
 
-The experiment indicates that Adam converges faster in the initial period while then settle in a bad solution for a while without further improvement. The SGD through slow in the initial period, capable of finding a better solution gradually in the end. According to reviews to papers [], it is found that adaptivit is more likely to overfit making it unable to find the optimal solution and generally worser than the solution of SGD though very popular. 
+The experiment indicates that Adam converges faster in the initial period while then settle in a bad solution for a while without further improvement. The SGD through slow in the initial period, capable of finding a better solution gradually in the end. According to reviews to papers [], it is found that adaptivit is more likely to overfit making it unable to find the optimal solution and generally worser than the solution of SGD though very popular[3]. 
 
 ### Decoder Implementation 
 ![how](https://lh3.googleusercontent.com/-rghISEoADVA/WyA1rbqxwNI/AAAAAAAAAGw/8k3WKRgZ01UnntFQdVknnGGFUoeGYZ_uwCL0BGAs/w663-d-h285-n-rw/decoder.PNG)
@@ -40,7 +40,7 @@ The main motivation is to see whether such a complex decoder integrated with att
 
 
 ### BLEU Importing 
-BLEU is a method based on n-gram model of sentences plus brevity penalty factor to evaluate the quality of translation via comparing the machine translation with human translation. Basically, the loss function maybe too naïve for analyzing the differences in semantic information. So I imported one in this project by using a NLTK package. The final results displayed is the average of 1000 samples. 
+BLEU is a method based on n-gram model of sentences plus brevity penalty factor to evaluate the quality of translation via comparing the machine translation with human translation[4]. Basically, the loss function maybe too naïve for analyzing the differences in semantic information. So I imported one in this project by using a NLTK package. The final results displayed is the average of 1000 samples. 
 Dimension of hidden layer 
 128 vs 256 vs 512 
 
@@ -66,7 +66,10 @@ The training normally takes quite long time (2-3 hours) due to Pytorch does not 
 
 The last number on the each row is the BLEU value. The higher, the better. 
 
-### Reference of the original project
-https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
+### References
+[1]https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
+[2]Cho, Kyunghyun, Bart van Merrienboer, Çaglar Gülçehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk and Yoshua Bengio. “Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation.” EMNLP (2014).
+[3]Wilson, A.C., Roelofs, R., Stern, M., Srebro, N., & Recht, B. (2017). The Marginal Value of Adaptive Gradient Methods in Machine Learning. NIPS.
+[4]Papineni, K., Roukos, S., Ward, T., & Zhu, W. (2002). Bleu: a Method for Automatic Evaluation of Machine Translation. ACL.
 
                                                Auther: Zequan Zhou   Group 43   EECS349  zequanzhou2019 AT U DOT Northwestern DOT edu
