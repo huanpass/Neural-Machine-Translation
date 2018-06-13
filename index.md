@@ -39,7 +39,6 @@ class DecoderRNN(nn.Module):
         self.hidden_size = hidden_size
         self.dropout_p = dropout_p
         self.dropout = nn.Dropout(self.dropout_p)
-
         self.embedding = nn.Embedding(output_size, hidden_size)
         self.gru = nn.GRU(hidden_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
