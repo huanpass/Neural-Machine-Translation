@@ -30,6 +30,8 @@ Another issue observed from the training result is that even the loss is decreas
 
 
 ### Decoder Implementation 
+![hoASDAAyw](https://lh3.googleusercontent.com/-JTiACwglR1M/WyDy8HZ3cMI/AAAAAAAAAME/Lsu8w1K5FW0ywRbA_m5NqAUk7oWrh52RACL0BGAs/w663-d-h365-n-rw/yyyyyyyyyyyyy.PNG)
+
 ![how](https://lh3.googleusercontent.com/-rghISEoADVA/WyA1rbqxwNI/AAAAAAAAAGw/8k3WKRgZ01UnntFQdVknnGGFUoeGYZ_uwCL0BGAs/w663-d-h285-n-rw/decoder.PNG)
 
 ```markdown
@@ -57,7 +59,7 @@ class DecoderRNN(nn.Module):
 
 ```
 
-The main motivation is to see whether such a complex decoder integrated with attention mechanism is necessary or not. I have implemented a simple decoder based on one GRU layer, with embedding and dropout functions added. The result indicates without attention mechanism, the training time can be speedup by 11.1% with similar even better translation quality. 
+The main motivation is to see whether such a complex decoder integrated with attention mechanism is necessary or not. I have implemented a simple decoder with only half of the original decoder based on one GRU layer, with embedding and dropout functions added. The result indicates without attention mechanism, the training time can be speedup by 11.1% with similar even better translation quality. 
 
 
 ### BLEU Importing 
