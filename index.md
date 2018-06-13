@@ -66,5 +66,7 @@ The training normally takes quite long time (2-3 hours) due to Pytorch does not 
 
 The last number on the each row is the BLEU value. The higher, the better. 
 
+### Reference of the original project
+https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
 
                                                Auther: Zequan Zhou   Group 43   EECS349  zequanzhou2019 AT U DOT Northwestern DOT edu
