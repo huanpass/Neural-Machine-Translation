@@ -61,5 +61,10 @@ French - English                                   Chinese - English
 ### Reflection 
 The training normally takes quite long time (2-3 hours) due to Pytorch does not support well for cloud platform. Should try with Tensorflow next time. 
 
+### BLEU samples
+![hrrss](https://lh3.googleusercontent.com/-fB3MnZff8lM/WyCleLItrhI/AAAAAAAAAJA/r9uCi-QjjCgEKAcikbVrQVVfeX21LKmKACL0BGAs/w663-d-h743-n-rw/simple_decoder_trainign_data.PNG)
 
-                                                                                             Auther: Zequan Zhou   Group 43   EECS349
+The last number on the each row is the BLEU value. The higher, the better. 
+
+
+                                               Auther: Zequan Zhou   Group 43   EECS349  zequanzhou2019 AT U DOT Northwestern DOT edu
