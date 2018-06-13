@@ -59,7 +59,7 @@ class DecoderRNN(nn.Module):
 
 ```
 
-The main motivation is to see whether such a complex decoder integrated with attention mechanism is necessary or not. I have implemented a simple decoder with only half of the original decoder based on one GRU layer, with embedding and dropout functions added. The result indicates without attention mechanism, the training time can be speedup by 11.1% with similar even better translation quality. 
+The main motivation is to see whether such a complex decoder integrated with attention mechanism is necessary or not. I have implemented a simple decoder with only half of the original decoder based on one GRU layer, with embedding and dropout functions added. The result indicates without attention mechanism, the training time can be speedup by 20% with similar even better translation quality. 
 
 
 ### BLEU Importing 
