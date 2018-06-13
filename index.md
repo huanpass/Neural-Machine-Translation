@@ -43,7 +43,7 @@ class DecoderRNN(nn.Module):
         self.gru = nn.GRU(hidden_size, hidden_size)
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
-
+        
     def forward(self, input, hidden):
         output = self.embedding(input).view(1, 1, -1)
         output = self.dropout(output)
@@ -51,7 +51,7 @@ class DecoderRNN(nn.Module):
         output, hidden = self.gru(output, hidden)
         output = self.softmax(self.out(output[0]))
         return output, hidden
-
+        
     def initHidden(self):
         return torch.zeros(1, 1, self.hidden_size, device=device)
 
