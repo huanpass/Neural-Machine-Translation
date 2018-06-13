@@ -55,7 +55,11 @@ The project has reviewed several papers and projects regarding machine translati
 
 French - English                                   Chinese - English
 
+### Attention mechanisim 
+![hrr](https://lh3.googleusercontent.com/-9etlTBhjPak/WyCidqf5F-I/AAAAAAAAAIk/t1k-1xjA_gIuHNrqM7cobizaGt2RHhFfwCJoC/w663-h290-n-rw/111111.PNG)
 
+### Reflection 
+The training normally takes quite long time (2-3 hours) due to Pytorch does not support well for cloud platform. Should try with Tensorflow next time. 
 
 
                                                                                              Auther: Zequan Zhou   Group 43   EECS349
